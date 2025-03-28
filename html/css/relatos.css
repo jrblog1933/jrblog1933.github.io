@@ -17,10 +17,8 @@
    background-image:url("/recursos/paraguachi.jpg");
 }
 .maestro{
-  background-image:url("/recursos/maestro.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image:url("/recursos/reunion-relatos.jpg");
+  
   
 }
 .cards-decimas-historia:hover{
