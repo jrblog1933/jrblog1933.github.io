@@ -1,0 +1,71 @@
+.seccion-1{
+    background-image:url("/recursos/reunion-relatos.jpg");
+}
+
+.cards-decimas-historia{
+    height: 400px;
+    width: 330px;
+   
+   	background-repeat: no-repeat;
+   	background-position: center;
+   	background-size: 105% 105%;
+   	transition: all .3s ease-in; 
+   	cursor: pointer;
+   	flex-1;
+}
+.paraguachi{
+   background-image:url("/recursos/paraguachi.jpg");
+}
+.maestro{
+  background-image:url("/recursos/maestro.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+.cards-decimas-historia:hover{
+	background-size: 100% 100%; 
+}
+
+.card{
+	background: #0008;
+	height: 100%;
+}
+
+.card-elements{
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	transition: transform .3s ease-in;
+}
+
+.card-elements:hover{
+	transform: translateY(-6px);
+}
+
+
+.card-elements-pa p{
+	font-size: .8rem;
+}
+
+.card-elements h4{
+	flex: 2;
+	align-self: center;
+	
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	padding-bottom: 1.4rem;
+	
+	font-weight: 700;
+	font-family: Arial;
+}
+
+.fs-6{
+	font-size: .7rem !important;
+}
+
+

@@ -1,0 +1,16 @@
+pendientes:
+
+-agregar los links del footer en plantilla
+-adaptar la plantilla de navs a decimas de historia y decimas de amor 4 archivos a modificar
+
+-crear la pagina de relatos
+
+-crear el motor de plantillas
+
+-agregar animaciones 
+-agregar lo de los ebooks
+-gif animados
+-intersection observer
+
+
+

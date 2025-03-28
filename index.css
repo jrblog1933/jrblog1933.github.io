@@ -1,0 +1,487 @@
+
+/*Estilos de la primera sección*/
+.seccion-1{
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://www.petalosdepoesia.com/wp-content/uploads/2024/01/Flor-Petalos-de-Poesia.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.seccion-1-art{
+    color: #fff;  
+}
+.seccion-1-art p{
+    
+    text-align: justify;
+}
+
+
+
+.carrusel-contenedor {
+    position: relative;
+    overflow: hidden; /* Importante para que el scroll horizontal funcione correctamente */
+    max-width: 100%; /* Asegura que el carrusel no se desborde horizontalmente */
+    margin-top: 2rem;
+    
+}
+
+.carrusel-lista {
+    display: flex; /* Coloca los elementos en fila horizontal */
+    overflow-x: scroll; /* Permite el scroll horizontal */
+    scroll-snap-type: x proximity; /* Hace que los elementos se "alineen" al final del scroll */
+    -webkit-overflow-scrolling: touch; /* Para scroll suave en iOS */
+    scrollbar-width: none; /* Oculta la barra de scroll en Firefox */
+    transition: scroll-left 0.5s ease-out;
+}
+
+.carrusel-lista::-webkit-scrollbar {
+    display: none; /* Oculta la barra de scroll en Chrome, Safari y Edge */
+}
+
+.carrusel-elemento {
+    position: relative;
+    width: 200px; /* Ancho de cada elemento (ajusta según necesidad) */
+    height: 300px; /* Alto de cada elemento (ajusta según necesidad) */
+    margin-right: 10px; /* Espacio entre elementos */
+    scroll-snap-align: start; /* Alinea el inicio de cada elemento al inicio del contenedor */
+    flex: none; /* Evita que los elementos se estiren */
+    border-radius: 8px;
+    overflow: hidden; /* Asegura que la imagen y el texto se mantengan dentro de las esquinas redondeadas */
+    cursor: pointer; /* Indica que son clickeables */
+    transition: transform 0.3s ease; /* Animación suave al hacer hover */
+}
+
+.carrusel-elemento img:hover {
+   filter: sepia(60%);
+}
+
+.carrusel-elemento img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cubre todo el espacio del elemento con la imagen */
+    display: block; /* Evita espacio extra debajo de la imagen */
+}
+
+.carrusel-texto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para el texto */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+     /* Fondo semi-transparente para los botones */
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    
+    z-index: 10; /* Asegura que los botones estén encima del contenido */
+     /* Ligeramente transparentes */
+    border: none;
+    background: none;
+}
+
+
+
+.carrusel-btn-prev {
+    left: 10px;
+}
+
+.carrusel-btn-next {
+    right: 10px;
+}
+
+
+
+
+/* Estilos de la Sección "Últimos Poemas" */
+.section-ultimos-poemas {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section-ultimos-poemas h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+.ultimos-poemas-contenedor {
+    display: flex;
+    overflow-x: auto; /* Horizontal scroll if cards overflow */
+    padding-bottom: 20px; /* Space for scrollbar */
+    gap: 20px; /* Space between cards */
+    max-width: 100%;
+    margin: 0 auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.ultimos-poemas-contenedor::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome, Safari, Edge */
+}
+
+
+.poema-card {
+    flex: 0 0 auto; /* Don't grow or shrink, base width is auto */
+    width: 300px; /* Adjust card width as needed */
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f0f0f0; /* Light grey background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease;
+}
+
+
+
+.poema-card img {
+    width: 100%;
+    height: 200px; /* Adjust image height as needed */
+    object-fit: cover; /* Cover container, crop if necessary */
+    display: block; /* Remove extra space below image */
+}
+
+.poema-contenido {
+    padding: 20px;
+    text-align: left; /* Align content to the left */
+}
+
+.poema-contenido h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.poema-extracto {
+    margin-bottom: 15px;
+    color: #555;
+    line-height: 1.4;
+}
+
+.poema-boton {
+    background-color: var(--bg-primary); /* Beige button color */
+    color: #fff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.poema-boton:hover {
+    background-color: var(--bg-secundary); /* Darker beige on hover */
+}
+
+
+/* Sección "Conóceme" */
+
+.inner{
+    
+  
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.inner-r{
+    padding-right: 0;
+    
+}
+
+.conoceme-titulo {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el título y el icono */
+    margin-bottom: 20px;
+}
+.conoceme-imagen img{
+  
+  filter: sepia(20%);
+}
+.conoceme-imagen{
+  position: relative;
+}
+.conoceme-imagen::before{
+  content: "-ℙ𝕣𝕠𝕗. 𝕁𝕠𝕤é  ℝ𝕒𝕞ó𝕟 𝕄𝕒𝕣𝕔𝕒𝕟𝕠-";
+  
+  
+  font-size: 1rem;
+  color:#333;
+  font-weight: bold;
+  font-family: italic;
+  width: 100%;
+  position: absolute;
+  bottom: -3rem;
+  left: 0;
+  text-align: center;
+  padding: 15px;
+  
+  
+  
+}
+
+.conoceme-titulo h2 {
+    font-size: 2em;
+    margin-right: 10px; /* Espacio entre el título y el icono */
+    color: #333;
+    text-align: center;
+    
+    width: 100%;
+}
+
+.conoceme-titulo i {
+    font-size: 1.5em; /* Tamaño del icono de play */
+    color: #777; /* Color del icono de play */
+}
+
+.conoceme-texto p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Sección "Sígueme" */
+.section-sigueme {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Fondo gris muy claro para la sección "Sígueme" */
+}
+
+.section-sigueme h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.sigueme-errores {
+    display: flex;
+    justify-content: center; /* Centra las cajas de error */
+    gap: 20px; /* Espacio entre las cajas de error */
+    margin-bottom: 20px;
+}
+
+
+
+.sigueme-iconos {
+    display: flex;
+    justify-content: center; /* Centra los iconos */
+    align-items: center;
+    gap: 20px; /* Espacio entre los iconos */
+    
+    height: 10em;
+}
+
+.sigueme-icono {
+    display: inline-flex;
+    
+    justify-content: center;
+    align-items: center;
+    width: 60px; /* Tamaño de los iconos */
+    height: 60px;
+    border-radius: 100000px;
+    
+    color: var(--bg-primary); /* Color de los iconos */
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  
+}
+.sigueme-icono:nth-child(3){
+ width: 40px;
+ height: 40px;
+}
+.sigueme-icono:nth-child(1){
+  width: 50px;
+  height: 50px;
+}
+
+.sigueme-icono:hover {
+    background-color: #bbb; /* Gris más oscuro al hacer hover */
+    color: var(--bg-secundary); /* Color de icono más oscuro al hacer hover */
+}
+
+
+
+
+@media (max-width: 575.98px) { 
+  
+    
+    .inner-r{
+
+    padding-right: 0;
+    text-align: justify;
+    width: 100%;
+    margin-bottom: 3rem;
+    
+    }
+    .inner{
+      padding-left:0;
+      margin-top:2rem;
+      text-align: justify;
+      
+    }
+    
+    
+    
+    .img-cita-scale{
+      transform: scale(1);
+      z-index: 90;
+    }
+    
+ .small-device{
+
+   display: block !important;
+   
+ }
+ 
+ footer{
+   height: 90vh;
+ }
+ .footer-contenedor{
+   height: 90vh;
+   flex-direction: column;
+   
+ }
+ 
+   .inner-r{
+     padding-right: 0;
+     
+   }
+   .mt-sm-5{
+     margin-top: 4rem;
+   }
+
+ }
+    .poema-card-move{
+
+     animation: poema-move 1s ease;
+
+   }
+ 
+
+@media (max-width: 767.98px) {  
+    
+}
+
+
+@media (max-width: 991.98px) { 
+    
+ }
+
+
+@media (max-width: 1199.98px) { 
+     
+    
+ }
+
+
+@media (max-width: 1399.98px) {
+    
+ }
+
+
+.loader{
+  position: fixed;
+  background-image:  url('loader.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.logo-loader{
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.cargando{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+.cargando b{
+  
+  display: flex;
+  
+  font-size: 5em;
+  font-weight: 900;
+  color: #fff;
+  
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+#l3{
+  color: green;
+}
+
+.move{
+  
+  animation: decrecer .5s ease-in forwards;
+  
+}
+@keyframes decrecer{
+  from{
+    transform: scale(1);
+  }to{
+    transform: scale(0);
+    
+    
+  }
+}
+
+
+.hypnotic {
+   width: 56px;
+   height: 56px;
+   position: relative;
+   border-radius: 50%;
+   background: repeating-conic-gradient(#0000,#c6b677 1deg 18deg,#0000 20deg 36deg);
+   animation: hypnotic-nlk15k 4s infinite linear;
+}
+
+.hypnotic::before {
+   content: "";
+   position: absolute;
+   border-radius: 50%;
+   inset: 0;
+   background: inherit;
+   animation: inherit;
+}
+
+@keyframes hypnotic-nlk15k {
+   100% {
+      transform: rotate(.5turn);
+   }
+}
+
