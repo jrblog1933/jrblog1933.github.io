@@ -15,6 +15,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+background:var(--bg-primary);
+}
+body{
+   animation: in 1s ease-in-out;
+}
+
+@keyframes in{
+0%{opacity:0;}
+100%{opacity:1;}
+}
 
 ul{
   padding: 0;
