@@ -314,8 +314,7 @@
 }
 
 .sigueme-icono:hover {
-    background-color: #bbb; /* Gris más oscuro al hacer hover */
-    color: var(--bg-secundary); /* Color de icono más oscuro al hacer hover */
+    color: var(--bg-secundary); 
 }
 
 
