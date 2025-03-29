@@ -14,7 +14,14 @@
 
     <style type="text/css">
         .seccion-1{
-            background-image:url("/recursos/decimasDeHistoria.png");
+            background-image:url("https://letraslibres.com/wp-content/uploads/2016/05/libros-viejos-230813.jpg");
+        }
+
+        a:hover{
+          color: var(--bg-secundary);
+        }
+        small{
+          font-size: .6rem;
         }
     </style>
   </head>
@@ -26,7 +33,7 @@
         <article class="seccion-1-art container">
            <article class="row">
                 <div class="col col-md-6  mt-sm-5">
-                    <h1 class="text-center">Sobre mi</h1>
+                    <h1 class="text-center display-5 fw-bold">Sobre mi</h1>
                     <p class="fw-bold">
                       Mi afición a escribir viene de la infancia. La lectura y la música siempre han sido mis pasiones y un gran refugio de soledades. Me gusta lo que soy cuando escribo y por eso no dejo de hacerlo. Este es mi pequeño espacio, pues aún tengo mucho que descubrir, aprender y compartir.
                     </p>
@@ -39,15 +46,60 @@
     </section>
 
     <main class="container">
-    	<section class="row">
-         <article>
-                 imagen
+    	<section class="row mt-5 mb-5">
+         <article class="col-sm-12 col-md-6 d-flex">
+            <figure>
+              <img class="img-fluid" src="/recursos/moncho-calidad.png" alt="Descripción de la imagen">
+                <figcaption class="text-center d-flex flex-column">
+                  <b>Prof. José Ramón Marcano</b>
+                  <small><b>Contador Público</b></small>
+                </figcaption>
+            </figure>
          </article>   
         
-        <article>
-            nombre descripcion
+        <article class="col-sm-12 col-md-6 d-flex align-items-center justify-content-center flex-column bg-light p-3">
+            
+            <div class="pb-3">
+              <h1 class="display-5 fw-bold"> José Ramón Marcano</h1>
+              
+            </div>
+
+            <div>
+              <p class="lh-2 text-justify">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore
+                <br><br> magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in 
+                <br><br>
+                reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+
+              <div>
+                
+                <a class="btn btn-primary rounded-0 bg-color-1 border border-white" href="/html/curriculum.html">
+                  Ver <em class="fw-bolder">curriculum-vitae</em>
+                </a>
+              </div>
         
-            <div class="iconos">iconos</div>
+            <div class="d-flex justify-content-end w-100 gap-3">
+              <a href="#" class="fs-3">
+                <i class = "fab fa-facebook"> </i>
+              
+              
+              </a>
+              <a href="#" class="fs-3">
+                <i class = "fab fa-instagram"> </i>
+              </a>
+              
+              <a href="#" class="fs-3">
+                <i class = "fab fa-whatsapp"> </i>
+              </a>
+           
+            </div>
         </article>
 
         </section>
