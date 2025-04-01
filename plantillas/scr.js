@@ -75,6 +75,7 @@ async function cargarPlantilla(nombre, id){
 
 
             const decimas = document.querySelector(".decimas");
+            const decimasContainer = document.querySelector(".decimas-container");
             decimas.onclick = function(){
                 decimasContainer.classList.toggle("de-active")
             }
