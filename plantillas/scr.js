@@ -20,7 +20,7 @@ function moverCarrusel(direccion) {
     posicionActual = posicionFinal; // Actualiza la posición actual inmediatamente
 
     let tiempoInicio = null;
-    const duracionAnimacion = 500; // Duración en milisegundos
+    const duracionAnimacion = 1000; // Duración en milisegundos
 
     function animarScroll(tiempoActual) {
         if (!tiempoInicio) tiempoInicio = tiempoActual;
@@ -42,42 +42,11 @@ function moverCarrusel(direccion) {
     requestAnimationFrame(animarScroll);
 }
 
-
-let touchStartX = 0;
-let touchEndX = 0;
-
-carruselLista.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-});
-
-carruselLista.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    manejarSwipe();
-});
-
-function manejarSwipe() {
-    const swipeThreshold = 50; // Umbral de distancia para considerar un swipe
-    const swipeDistancia = touchStartX - touchEndX;
-
-    if (swipeDistancia > swipeThreshold) {
-        // Swipe hacia la izquierda (siguiente)
-        moverCarrusel(1);
-    } else if (swipeDistancia < -swipeThreshold) {
-        // Swipe hacia la derecha (anterior)
-        moverCarrusel(-1);
-    }
-    // Si el deslizamiento no supera el umbral, no se hace nada (o podrías añadir un comportamiento de "resorte" de vuelta a la posición original si lo deseas)
-}
-
 */
 
 
-// variables de efecto loading...
-const loader = document.querySelector(".loader");
-const logoLoader = document.querySelector(".logo-img");
-const l1 = document.getElementById("l1");
-const l2 = document.getElementById("l2");
-const l3 = document.getElementById("l3");
+
+
 //================================================
 
 
@@ -86,9 +55,7 @@ const l3 = document.getElementById("l3");
 //===============================================
 
 
-//manejo de eventos para el dropdown del nav desktop
-    const drop = document.querySelector(".drop");
-    const down = document.querySelector(".down");
+
 
 //=================END NAV EVENTHANDLERS===========
 
@@ -105,22 +72,9 @@ async function cargarPlantilla(nombre, id){
 
             console.log("aqui estoy");
 
-            const drop = document.querySelector(".drop");
-            const down = document.querySelector(".down");
+
 
             const decimas = document.querySelector(".decimas");
-            const decimasContainer = document.querySelector(".decimas-container");
-            
-            drop.onmouseover = function(){
-              down.classList.add("show");     
-            }
-
-            drop.onmouseleave = function(){
-                   
-                down.classList.remove("show");
-            }
-
-
             decimas.onclick = function(){
                 decimasContainer.classList.toggle("de-active")
             }
@@ -139,33 +93,6 @@ async function cargarPlantilla(nombre, id){
 addEventListener("DOMContentLoaded",()=>{
     
 
-    /*//efecto loading..
-    setTimeout(()=>{
-      l1.setAttribute("style","opacity:1")
-    },500)
-
-    setTimeout(()=>{
-
-      l2.setAttribute("style","opacity:1")
-
-    },1000)
-
-    setTimeout(()=>{
-
-      l3.setAttribute("style","opacity:1")
-      logoLoader.classList.add("move");
-
-    },1500)
-
-    setTimeout(()=>{
-      loader.setAttribute("style","display:none");
-    },2500)
-*/
-    //=================END EFECTO LOADING============
-
-
-
-
 // motor de plantillas diseñado para automatizar la carga de parte de las páginas
 
     cargarPlantilla("header","header");
@@ -176,6 +103,8 @@ addEventListener("DOMContentLoaded",()=>{
 
 
 //efecto animado para las secciones:
+   
+
    const seccionesObservables = document.querySelectorAll('.oculto');
 
         const observer = new IntersectionObserver((entradas) => {
@@ -205,25 +134,6 @@ addEventListener("DOMContentLoaded",()=>{
         }
         
         
-        const poema = document.querySelector('.poema-move');
-
-
-
-        const observerPoema= new IntersectionObserver((entradas) => {
-            entradas.forEach(entrada => {
-                if (entrada.isIntersecting) {
-                    entrada.target.classList.add('poema-card-move');
-              
-                    observer.unobserve(entrada.target); // Para que solo se observe una vez
-                }
-            });
-        }, {
-            rootMargin: '0px',
-            threshold: 0.8 // Porcentaje de visibilidad para activar el efecto
-        });
-
-      
-          observerPoema.observe(poema);
         
     
 });

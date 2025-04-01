@@ -15,17 +15,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-html{
-background:var(--bg-primary);
-}
-body{
-   animation: in 1s ease-in-out;
-}
-
-@keyframes in{
-0%{opacity:0;}
-100%{opacity:1;}
-}
 
 ul{
   padding: 0;
@@ -34,8 +23,8 @@ a{
   color: inherit;
   text-decoration: none;
 }
-a{
-  color:none;
+a:hover{
+  color:var(bg-secundary);
 }
 li{
   padding: 0;
@@ -48,6 +37,21 @@ li{
 body,p,h1,h2,h3,h4,a,small,li{
   font-family: "Roboto", Sans-Serif !important;
 }
+body{
+  animation:in 1s ease-in-out;
+  
+}
+html{
+  background: var(--bg-primary);
+}
+@keyframes in{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 .form-control:focus{
   border-color: var(--bg-secundary) !important;
   box-shadow: 0 0 0 0.2rem var(--bg-secundary-alfa) !important;
@@ -55,7 +59,7 @@ body,p,h1,h2,h3,h4,a,small,li{
 }
 
 
- .li-lg::before, .li-lg-div::before{
+ .li-lg::before, .li-lg-div::before, .btn-dropdown::before{
     content: "";
     
     text-decoration: underline;
@@ -148,40 +152,6 @@ body,p,h1,h2,h3,h4,a,small,li{
 
 }
 
-
-
-
-.padre-dropdown{
-  position:relative;
-}
-
-.down{
-  display: none;
-  
-  background: var(--bg-primary);
-  margin-top: 2rem;
-  height: 300px;
-  font-size: .7rem;
-  
-  box-shadow: 0 0 5px 1px #0004;
-  
-  border-radius: 0 0 2px 2px;
-
-}
-.down ul li{
-  
-
-  padding: .3rem  1rem;
-  color:#fff;
-  
-}
-.down ul li i{
-  padding-right:.2rem; 
-}
-
-.down ul li:hover{
-  color: var(--bg-secundary);
-}
 
 
 .show{
@@ -443,3 +413,29 @@ footer {
         
     }
 }
+
+
+/*BOOTSTRAP CLASES*/
+
+.dropdown-toggle:focus{
+        box-shadow: none;
+      }
+
+      .btn-dropdown:hover{
+        color: var(--bg-secundary);
+      }
+
+      .dropdown-menu li a{
+
+        font-size: .8rem;
+      }
+
+      .dropdown-menu li a:hover{
+        color: var(--bg-secundary) !important;
+        background: none ; 
+        text-decoration: underline var(--bg-secundary-alfa);
+      }
+
+  .dropdown-toggle::after{
+    display: none;
+  }
