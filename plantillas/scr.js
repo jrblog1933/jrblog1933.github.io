@@ -93,7 +93,8 @@ async function cargarPlantilla(nombre, id){
 //manejador de evento al cargar la pagina
 addEventListener("DOMContentLoaded",()=>{
     
-
+     Array.from(document.querySelectorAll(img))
+    .forEach(img => img.loading = "lazy";);
 // motor de plantillas diseñado para automatizar la carga de parte de las páginas
 
     cargarPlantilla("header","header");
