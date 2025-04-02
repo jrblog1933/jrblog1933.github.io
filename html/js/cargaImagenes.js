@@ -74,7 +74,7 @@ class CreateElements{
             const img = document.createElement("img");
             figure.setAttribute("style","height:100%;");
             img.src = `/GALERIA/${archivos[j][1]}/${i}.jpg`;
-
+            img.loading = "lazy";
             img.classList.add("img-fluid"); 
             img.classList.add("shadow"); 
 
