@@ -1,0 +1,1186 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Monserrat:wght@600;800&family=Roboto+Mono&display=swap');
+
+
+/*Esta hoja de estilos contiene estilos globales y del index.html
+Para refactorizar:
+corregir estilos para que sean globales
+ajustar nombre de variables;
+estilos repetidos de bootstrap y personalizados
+agrupar por estilos 
+  estilos generales
+  estilos esditados de bootstrap
+  estilos propios
+  y mediaqueries
+
+Ordenar por alfabeto y por orden de jerarquía en cascada
+evitar las repeticiones..
+
+para esta versión 1.0, el diseñó se realizó bajo el concepto de prototipado rápido
+
+*/
+
+:root{
+    --bg-primary: #000;
+    --bg-primary-alfa: #0007;
+    --bg-secundary: #f4d9bb;
+    --bg-secundary-alfa: #f4d9bbcf;
+    --bg-red:#0dcaf0;
+    
+
+    --bg-gris:#333333;
+}
+
+/*Estilos predefinidos*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+  padding: 0;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+a:hover{
+  color:var(bg-secundary);
+}
+li{
+  padding: 0;
+  transition: color .3s ease;
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  display: block;
+}
+
+h1,h2{
+  font-family: "Monserrat",san-serif !important;
+}
+p{
+  font-family: "Lato",san-serif !important;
+}
+b,em,h3,small{
+  font-family: "Roboto Mono",monospace !important;
+}
+
+
+body{
+  animation:in 1s ease-in-out;
+  
+}
+html{
+  background: var(--bg-primary);
+}
+@keyframes in{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+/*Cambios en bootstrap*/
+
+
+/*-------------------------*/
+
+#comentarios{
+  width: 100%;
+}
+
+.form-control:focus,.form-select:focus{
+  border-color: var(--bg-secundary) !important;
+  box-shadow: 0 0 0 0.2rem var(--bg-secundary-alfa) !important;
+  
+}
+
+
+ .li-lg::before, .li-lg-div::before, .btn-dropdown::before{
+    content: "";
+    
+    text-decoration: underline;
+    width: 100%;
+    position: absolute;
+    bottom: -.5rem;
+    height: 2px;
+    display: none;
+
+}
+
+
+.li-lg:hover, .li-lg-div:hover{
+    color: #a9b373;
+     
+}
+
+ .li-lg:hover::before, .li-lg-div::before{
+    display: block;
+    background-color: #a9b3738c;
+    color: #000;
+    animation: effect .5s ease-out;
+    
+}
+
+.container-cards{
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+      
+      grid-gap: 1rem;
+
+    }
+
+
+.color-1{
+  color: var(--bg-secundary) !important;
+  
+}
+.bg-color-1{
+  background: var(--bg-red) !important;
+  font-weight: 800;
+}
+.bg-color-2{
+  background: var(--bg-primary) !important;
+}
+.color-2{
+  color:var(--bg-primary) !important;
+}
+
+.color-3{
+  color:var(--bg-gris);
+}
+.bg-color-3{
+  background: var(--bg-red);
+}
+
+
+/*animación para las secciones*/
+  .oculto {
+    opacity: 0;
+    transform: translateY(20px);
+    
+        }
+        
+  .mostrar {
+        animation: aparicion .3s ease;
+   }
+   @keyframes aparicion{
+     from{
+       opacity: 0;
+       transform: translateY(20px);
+     }to{
+       opacity: 1;
+       transform: translateY(0);
+     }
+   }
+   
+
+  
+  @keyframes poema-move{
+    0%{
+      transform: translateX(-50px);
+    }
+    50%{
+      transform: translateX(50px);
+    }
+    100%{
+      transform: translateX(0);
+    }
+  }
+
+/*Estilos del header en desktop*/
+.header-lg{
+    height: 32vh;
+    
+    grid-template-rows: 1fr 4rem; 
+    
+    background-color:#000; /* Color verde oscuro de fondo */
+    border-bottom: 1px solid #a9b37360;
+    border-width: 0;
+    border-bottom-width:1px;
+}
+.header-lg-contenedor-logo{
+  width: 15rem; 
+  top: 50%; 
+  left: 50%;
+
+}
+
+
+
+.show{
+  display: block;
+}
+
+
+
+
+footer {
+    background-color:var(--bg-primary); /* Color  oscuro de fondo */
+    color: #fff; /* Color de texto blanco */
+    padding-top: 40px;
+    
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.footer-contenedor {
+    display: flex;
+    justify-content: space-around; /*
+    Distribuye las secciones uniformemente */
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el footer horizontalmente */
+    padding-left: 20px;
+    padding-right: 20px;
+     
+}
+
+
+.footer-seccion {
+    flex: 1; /* Ocupa el mismo espacio cada sección */
+    margin-right: 20px; /* Espacio entre secciones */
+    text-align: center;
+    
+    
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+}
+
+/* Elimina el margen derecho de la última sección para que no haya espacio extra al final */
+.footer-seccion:last-child {
+    margin-right: 0;
+}
+
+.footer-seccion-logo {
+    flex: 0 0 auto; /* No se estira, tamaño automático según el contenido */
+    width: 200px; /* Ancho fijo para la sección del logo, ajusta según necesites */
+    text-align: left; /* Alinea el texto a la izquierda en la sección del logo */
+}
+
+.footer-seccion-logo img {
+    max-width: 100%; /* Asegura que el logo no se desborde */
+    height: auto;
+    display: block; /* Elimina espacio extra debajo de la imagen */
+    margin-bottom: 10px; /* Espacio debajo del logo */
+}
+.footer-seccion-logo p {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: var(--bg-secundary); /* Color beige para el nombre del sitio */
+}
+
+
+.footer-seccion h3 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: #fff; /* Color beige para los títulos de sección */
+}
+
+.footer-seccion ul {
+    list-style: none; /* Elimina los puntos de lista */
+    padding: 0;
+    
+    
+    
+}
+
+.footer-seccion li {
+    margin-bottom: 0;
+    font-size: .9rem;
+    
+}
+
+.active-link{
+  color: var(--bg-secundary) !important;
+}
+
+.footer-seccion a {
+    color: var(--bg-secundary); 
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    transition: color 0.3s ease; /* Transición suave para el color al hacer hover */
+}
+
+.footer-seccion a:hover {
+    color: var(--bg-red); /* Color beige al hacer hover sobre los enlaces */
+}
+
+.footer-copyright {
+    text-align: center; /* Centra el texto de copyright */
+    
+    border-top: 1px solid var(--bg-secundary) ; /* Línea divisoria superior */
+    border-width: 0;
+    border-top-width: 2px;
+    font-size: 0.9em;
+    color: #ccc; /* Color gris claro para el copyright */
+    
+    background-color: #333333;
+    height: 5rem;
+    
+    
+}
+.footer-copyright p{
+  padding:1rem;
+  
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem ;
+}
+
+
+
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+        
+ }
+
+
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
+
+ }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+    
+ }
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    
+  }
+
+
+
+.logo-name{
+    text-shadow: -2px -2px 1px #fff;
+}
+
+.logo-name::after{
+  content: "";
+  
+  width: 100%;
+  height: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color:var(--bg-red);
+  clip-path: polygon(1% 70%, 20% 100%, 100% 100%);
+  border-radius: 9999px;
+}
+
+
+.navbar{
+    background-color: #000 ;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    /*border-bottom: 1px solid #a9b37360;*/
+    border-width: 0;
+    border-bottom-width:1px ;
+    
+}
+
+.fecha::after{
+  content: "Blog en desarrollo";
+  position: absolute;
+  width: 180px;
+  background: #000;
+  font-size: .8rem;
+  bottom: -1.7rem;
+  left: 0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .2rem;
+  font-weight: 800;
+  font-style: italic;
+  
+}
+.collapse ul{
+  background-color: var(--bg-primary);
+  border-radius: none !important;
+  
+
+}
+
+.navbar ul a:hover{
+  color: var(--bg-secundary);
+
+} 
+.dropdown-menu li:hover{
+  border-bottom:1px solid var(--bg-gris);
+  
+}
+.dropdown-menu{
+  padding: .5rem;
+}
+
+.dropdown-menu li a{
+  color: #fff;
+  padding-bottom: .8rem;
+  font-weight: 900;
+}
+.dropdown-menu li a:hover{
+  font-weight: none !important;
+  text-decoration: none !important;
+}
+
+.nav-item{
+    border-width: 0;
+    border-bottom-width:1px ;
+    cursor: pointer;
+    text-align: center;
+    
+}
+.nav-item a i{
+  color: var(--bg-red);
+}
+.nav-link{
+    position:relative;
+    font-weight: bolder;
+    font-size: .8rem;   
+}
+
+.underline-azul{
+  text-decoration: underline var(--bg-red) !important;
+}
+.blue{
+  color:var(--bg-red);
+}
+.nav-link::before{
+  content: "";
+  position: absolute;
+  display: none;
+  max-width: 80%;
+  background: var(--bg-red);
+  height: 20px;
+  left: 10;
+  bottom: 0;
+  clip-path: polygon(1% 75%, 20% 100%, 100% 100%);
+  
+} 
+
+.nav-link:hover::before{
+    width: 100%;
+    animation: effect .5s ease-out;
+    display: block;
+
+}
+.decimas-container{
+  display: none;
+  
+}
+
+.de-active{
+  display:block;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  
+  
+}
+.de-active ul{
+  list-style: none;
+  
+
+  padding: 0;
+  
+}
+.de-active ul li{
+  
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom:1px solid var(--bg-secundary);
+}
+.text-justify{
+    text-align: justify;
+}
+
+
+ .navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(250,250,250)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    
+    
+}
+.navbar-toggler{
+  outline: 1px solid #fff4;
+}
+.navbar-toggler:hover{
+  outline: 3px solid beige !important;
+}
+
+.log{
+    
+    height: 3rem;
+}
+
+
+.active-link{
+  color: var(--bg-red) !important;
+  font-weight: 333; 
+}
+
+.active-link:hover{
+  color: var(--bg-red) !important;
+   
+}
+
+
+}
+.fa-mouse-pointer{
+  transform: rotateY(180deg);
+}
+.bg-black{
+  background: #000;
+}
+
+.drop-list li a{
+  font-style: italic;
+  font-weight: 444;
+}
+.drop-list li a:active{
+  background:var(--bg-secundary); 
+}
+.fa-chevron-right{
+  color: var(--bg-red);
+}
+
+
+/*Efecto en nav*/
+
+@keyframes effect{
+    0%{
+        width: 0%;
+        transform: translateX(-1rem);
+    }
+    50%{
+        transform: translateX(-4px);
+        
+    }
+    100%{
+        
+        transform: translateX(0px);
+        width: 100%;
+        
+    }
+}
+
+/*BOOTSTRAP CLASES*/
+
+.dropdown-toggle:focus{
+        box-shadow: none;
+      }
+
+      .btn-dropdown:hover{
+        color: var(--bg-secundary);
+      }
+
+      .dropdown-menu li a{
+
+        font-size: .7rem;
+      }
+
+      .dropdown-menu li a:hover{
+        color: var(--bg-secundary) !important;
+        background: none ; 
+        text-decoration: underline var(--bg-secundary-alfa);
+      }
+
+  .dropdown-toggle::after{
+    display: none;
+  }
+
+
+
+  @media (max-width: 575.98px){  
+    
+    .navbar-nav .nav-item{
+      border: none !important;
+    }
+    .nav-link:hover::before{
+      animation: none;
+      display: none;
+    }
+
+    
+
+    .fecha::after{
+      
+      left: 60%;
+
+    }
+ 
+  }
+
+
+
+
+  @media screen and (orientation: landscape){
+
+  .navbar-nav .nav-item{
+      border: none !important;
+    }
+    .nav-link:hover::before{
+      animation: none;
+      display: none;
+    }
+
+    
+}
+/*Refactorizar para que funcione en cualquier tamaño los nav-link*/
+
+@media (min-width: 1199.98px){  
+    
+    .nav-link:hover::before{
+      animation: effect .5s ease-out;
+    display: block;
+    }
+
+
+  }
+
+
+
+/*ESTILOS DE INDEX.HTML*/
+
+/*Estilos de la primera sección*/
+
+
+.seccion-1{
+   height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.santa-rita{
+  background-image: url("/recursos/cyan.png");
+  background-position: center;
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 200px;
+
+
+}
+.seccion-1-art{
+    color: #fff;  
+}
+.seccion-1-art p{
+    
+    text-align: justify;
+}
+
+
+
+.carrusel-contenedor {
+    position: relative;
+    overflow: hidden; /* Importante para que el scroll horizontal funcione correctamente */
+    max-width: 100%; /* Asegura que el carrusel no se desborde horizontalmente */
+    margin-top: 2rem;
+    
+}
+
+.carrusel-lista {
+    display: flex; /* Coloca los elementos en fila horizontal */
+    overflow-x: scroll; /* Permite el scroll horizontal */
+    scroll-snap-type: x proximity; /* Hace que los elementos se "alineen" al final del scroll */
+    -webkit-overflow-scrolling: touch; /* Para scroll suave en iOS */
+    scrollbar-width: none; /* Oculta la barra de scroll en Firefox */
+    transition: scroll-left 0.5s ease-out;
+}
+
+.carrusel-lista::-webkit-scrollbar {
+    display: none; /* Oculta la barra de scroll en Chrome, Safari y Edge */
+}
+
+.carrusel-elemento {
+    position: relative;
+    width: 200px; /* Ancho de cada elemento (ajusta según necesidad) */
+    height: 300px; /* Alto de cada elemento (ajusta según necesidad) */
+    margin-right: 10px; /* Espacio entre elementos */
+    scroll-snap-align: start; /* Alinea el inicio de cada elemento al inicio del contenedor */
+    flex: none; /* Evita que los elementos se estiren */
+    border-radius: 8px;
+    overflow: hidden; /* Asegura que la imagen y el texto se mantengan dentro de las esquinas redondeadas */
+    cursor: pointer; /* Indica que son clickeables */
+    transition: transform 0.3s ease; /* Animación suave al hacer hover */
+}
+
+.carrusel-elemento img:hover {
+   filter: sepia(60%);
+}
+
+.carrusel-elemento img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cubre todo el espacio del elemento con la imagen */
+    display: block; /* Evita espacio extra debajo de la imagen */
+}
+
+.carrusel-texto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para el texto */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+     /* Fondo semi-transparente para los botones */
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    
+    z-index: 10; /* Asegura que los botones estén encima del contenido */
+     /* Ligeramente transparentes */
+    border: none;
+    background: none;
+}
+
+
+
+.carrusel-btn-prev {
+    left: 10px;
+}
+
+.carrusel-btn-next {
+    right: 10px;
+}
+
+
+
+
+/* Estilos de la Sección "Últimos Poemas" */
+.section-ultimos-poemas {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section-ultimos-poemas h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+.ultimos-poemas-contenedor {
+    display: flex;
+    overflow-x: auto; /* Horizontal scroll if cards overflow */
+    padding-bottom: 20px; /* Space for scrollbar */
+    gap: 20px; /* Space between cards */
+    max-width: 100%;
+    margin: 0 auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.ultimos-poemas-contenedor::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome, Safari, Edge */
+}
+
+
+.poema-card {
+    flex: 0 0 auto; /* Don't grow or shrink, base width is auto */
+    width: 300px; /* Adjust card width as needed */
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f0f0f0; /* Light grey background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease;
+}
+
+
+
+.poema-card img {
+    width: 100%;
+    height: 200px; /* Adjust image height as needed */
+    object-fit: cover; /* Cover container, crop if necessary */
+    display: block; /* Remove extra space below image */
+}
+
+.poema-contenido {
+    padding: 20px;
+    text-align: left; /* Align content to the left */
+}
+
+.poema-contenido h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.poema-extracto {
+    margin-bottom: 15px;
+    color: #555;
+    line-height: 1.4;
+}
+
+.poema-boton {
+    background-color: var(--bg-primary); /* Beige button color */
+    color: #fff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.poema-boton:hover {
+    background-color: var(--bg-secundary); /* Darker beige on hover */
+}
+
+
+/* Sección "Conóceme" */
+
+.inner{
+    
+  
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.inner-r{
+    padding-right: 0;
+    
+}
+
+.conoceme-titulo {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el título y el icono */
+    margin-bottom: 20px;
+}
+.conoceme-imagen img{
+  
+  filter: sepia(20%);
+}
+.conoceme-imagen{
+  position: relative;
+}
+.conoceme-imagen::before{
+  content: "- Prof. José Ramón Marcano -";
+  font-size: 1rem;
+  color:#333;
+  font-weight: bold;
+  width: 100%;
+  position: absolute;
+  bottom: -3rem;
+  left: 0;
+  text-align: center;
+  padding: 15px;
+  
+  
+  
+}
+
+.conoceme-titulo h2 {
+    font-size: 2em;
+    margin-right: 10px; /* Espacio entre el título y el icono */
+    color: #333;
+    text-align: center;
+    
+    width: 100%;
+}
+
+.conoceme-titulo i {
+    font-size: 1.5em; /* Tamaño del icono de play */
+    color: #777; /* Color del icono de play */
+}
+
+.conoceme-texto p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Sección "Sígueme" */
+.section-sigueme {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Fondo gris muy claro para la sección "Sígueme" */
+}
+
+.section-sigueme h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.sigueme-errores {
+    display: flex;
+    justify-content: center; /* Centra las cajas de error */
+    gap: 20px; /* Espacio entre las cajas de error */
+    margin-bottom: 20px;
+}
+
+
+
+.sigueme-iconos {
+    display: flex;
+    justify-content: center; /* Centra los iconos */
+    align-items: center;
+    gap: 20px; /* Espacio entre los iconos */
+    
+    height: 10em;
+}
+
+.sigueme-icono {
+    display: inline-flex;
+    
+    justify-content: center;
+    align-items: center;
+    width: 60px; /* Tamaño de los iconos */
+    height: 60px;
+    border-radius: 100000px;
+    
+    color: var(--bg-primary); /* Color de los iconos */
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  
+}
+.sigueme-icono:nth-child(3){
+ width: 40px;
+ height: 40px;
+}
+.sigueme-icono:nth-child(1){
+  width: 50px;
+  height: 50px;
+}
+
+.sigueme-icono:hover {
+    color: var(--bg-secundary); 
+}
+
+
+
+
+@media (max-width: 575.98px) { 
+    
+    .inner-r{
+
+    padding-right: 0;
+    text-align: justify;
+    width: 100%;
+    margin-bottom: 3rem;
+    
+    }
+    .inner{
+      padding-left:0;
+      margin-top:2rem;
+      text-align: justify;
+      
+    }
+    
+    
+    
+    .img-cita-scale{
+      transform: scale(1);
+      z-index: 90;
+    }
+    
+ .small-device{
+
+   display: block !important;
+   
+ }
+ 
+ footer{
+   height: 90vh;
+ }
+ .footer-contenedor{
+   height: 90vh;
+   flex-direction: column;
+   
+ }
+ 
+   .inner-r{
+     padding-right: 0;
+     
+   }
+   .mt-sm-5{
+     margin-top: 4rem;
+   }
+
+  .seccion-1-gif{
+    height: 26rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/recursos/presentacion.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #000;
+}
+
+
+ }
+
+@media (orientation: landscape){
+  .seccion-1-gif{
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/recursos/presentacion.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #000;
+}
+}
+
+
+
+    .poema-card-move{
+
+     animation: poema-move 1s ease;
+
+   }
+ 
+
+@media (max-width: 767.98px) {  
+    
+}
+
+
+@media (max-width: 991.98px) { 
+    
+ }
+
+
+@media (max-width: 1199.98px) { 
+     
+    
+ }
+
+
+@media (max-width: 1399.98px) {
+    
+ }
+
+
+.loader{
+  position: fixed;
+  background-image:  url('loader.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.logo-loader{
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.cargando{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+.cargando b{
+  
+  display: flex;
+  
+  font-size: 5em;
+  font-weight: 900;
+  color: #fff;
+  
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+#l3{
+  color: green;
+}
+
+.move{
+  
+  animation: decrecer .5s ease-in forwards;
+  
+}
+@keyframes decrecer{
+  from{
+    transform: scale(1);
+  }to{
+    transform: scale(0);
+    
+    
+  }
+}
+
+
+.hypnotic {
+   width: 56px;
+   height: 56px;
+   position: relative;
+   border-radius: 50%;
+   background: repeating-conic-gradient(#0000,#c6b677 1deg 18deg,#0000 20deg 36deg);
+   animation: hypnotic-nlk15k 4s infinite linear;
+}
+
+.hypnotic::before {
+   content: "";
+   position: absolute;
+   border-radius: 50%;
+   inset: 0;
+   background: inherit;
+   animation: inherit;
+}
+
+@keyframes hypnotic-nlk15k {
+   100% {
+      transform: rotate(.5turn);
+   }
+}
+
+
+
+.btn:focus{
+  box-shadow: none;
+}

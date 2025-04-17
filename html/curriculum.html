@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Curriculum Vitae - José Ramón Marcano</title>
+    <style>
+        :root {
+            --primary-color: #0dcaf0; 
+            --secondary-color: #f4d9bb; 
+            --border-color: #bdc3c7; /* Light Gray */
+            --background-color: #ecf0f1; /* Very Light Gray */
+            --text-color: #34495e; /* Dark Gray */
+            --white-color: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align top */
+            padding-top: 30px; /* Add padding top */
+            padding-bottom: 30px; /* Add padding bottom */
+        }
+
+        .cv-container {
+            background-color: var(--white-color);
+            max-width: 850px; /* Increased width slightly */
+            width: 90%; /* Responsive width */
+            margin: 20px auto;
+            padding: 30px 40px; /* Increased padding */
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px; /* Slightly rounded corners */
+            position: relative; /* For positioning elements like photo */
+            overflow: hidden; /* Ensure borders contain content */
+        }
+
+        /* Style for the photo area */
+        .photo-placeholder {
+            width: 130px; /* Size for a passport-style photo */
+            height: 160px;
+            background-color: var(--background-color);
+            
+            position: absolute; /* Position top-right */
+            top: 30px;
+            right: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 0.8em;
+            color: var(--text-color);
+            border-radius: 4px;
+            
+        }
+
+        .photo-placeholder img{
+
+        }
+
+    
+        .cv-header h1 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 5px;
+            font-size: 2.2em; /* Larger main title */
+            font-weight: 600;
+        }
+
+        .cv-header h2 {
+            color: var(--secondary-color);
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-size: 1.6em; /* Larger name */
+            font-weight: 500;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+
+        .cv-section {
+            margin-bottom: 25px; /* Space between sections */
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color); /* Separator line */
+        }
+        .cv-section:last-child {
+             border-bottom: none; /* No line for the last section */
+             margin-bottom: 0;
+             padding-bottom: 0;
+        }
+
+        .cv-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            font-weight: 600;
+            border-left: 4px solid var(--secondary-color); /* Accent line */
+            padding-left: 10px;
+        }
+
+        .cv-section p, .cv-section ul {
+            margin-left: 15px; /* Indent content under heading */
+            font-size: 0.95em;
+        }
+
+        .cv-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .cv-section li {
+            margin-bottom: 8px; /* Space between list items */
+            position: relative;
+            padding-left: 20px; /* Space for custom bullet */
+        }
+        
+        /* Custom bullet point */
+        .cv-section li::before {
+            content: '•'; /* Bullet character */
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .cv-section strong {
+            font-weight: 600; /* Slightly bolder */
+            color: var(--primary-color);
+        }
+
+        .cv-section em { /* For emphasis on dates or specifics */
+            font-style: normal;
+            color: var(--text-color); /* Maintain text color, but could change */
+        }
+
+        .two-columns {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; /* Space between columns */
+        }
+
+        .column {
+            width: 48%; /* Adjust as needed */
+        }
+        
+         /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .cv-container {
+                padding: 20px;
+            }
+            .photo-placeholder {
+                position: static; /* Stack photo on smaller screens */
+                margin: 0 auto 20px auto; /* Center it */
+                width: 120px;
+                height: 150px;
+            }
+            .cv-header h1 {
+                font-size: 1.8em;
+            }
+             .cv-header h2 {
+                font-size: 1.4em;
+            }
+             .cv-section h3 {
+                font-size: 1.1em;
+            }
+             .two-columns {
+                flex-direction: column; /* Stack columns */
+                gap: 0;
+            }
+            .column {
+                width: 100%; /* Full width */
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        <div class="photo-placeholder">
+            <img src="/GALERIA/otros/7.webp" class="img-fluid">
+        </div>
+
+        <div class="cv-header">
+            <h1>CURRICULUM VITAE 1997</h1>
+            <h2>José Ramón Marcano</h2>
+        </div>
+
+        <div class="cv-section" id="personal-info">
+            <h3>Datos Personales</h3>
+            <p><strong>Nombre y Apellidos:</strong> José Ramón Marcano</p>
+            <p><strong>Lugar y Fecha de Nacimiento:</strong> Paraguachi - <em>18/09/1933</em></p>
+        </div>
+
+        <div class="cv-section" id="education">
+            <h3>Estudios Realizados</h3>
+            <p><strong>Educación Básica:</strong> Escuela Antolín del Campo - Paraguachi - Edo. Nva. Esparta</p>
+            <p><strong>Bachillerato:</strong> Liceo Dr. Francisco Antonio Risquez - La Asunción - Edo. Nva. Esparta, por equivalencia.</p>
+            <p><strong>Educación Profesional:</strong> Instituto Juan Bautista Arismendi - La Asunción - E.N.E.</p>
+            <p><strong>Título Profesional:</strong> Contador - <em>Año 1957</em></p>
+        </div>
+
+        <div class="cv-section" id="public-accountant">
+            <h3>Contador Público</h3>
+            <p>Por cumplir los requisitos del Artículo 29 de la Ley del Ejercicio de la Contaduría Pública.- Credencial Registrada en la Oficina de Registro Público Principal, bajo el Nº 5 - Folios 4 y su Vto., Protocolo Unico - Tercer Trimestre - <em>Año 1.975</em>.</p>
+        </div>
+
+        <div class="cv-section" id="courses">
+            <h3>Cursos</h3>
+            <ul>
+                <li>Metodología para la enseñanza de asignaturas comerciales - Instituto Mejoramiento Profesional - Caracas - <em>Año 1968</em>.</li>
+                <li>Curso para Director de Liceos Nocturnos (Parasistema) en el Instituto Mejoramiento Profesional Ministerio de Educación - Caracas - <em>Año 1972</em>.</li>
+                <li>Curso de Especialización Docente en Especialidades Mercantiles - Instituto Mejoramiento Profesional Ministerio de Educación.</li>
+                <li>Curso en especialidad Tributaria - <em>año 1968</em> (actualizando siempre los conocimientos con las reformas existentes).</li>
+            </ul>
+        </div>
+
+        <div class="cv-section" id="professional-experience">
+             <h3>Ejercicio Profesional</h3>
+             <ul>
+                 <li>Maestro en la Escuela Nº 6 - La Rinconada - Antolín del Campo - Estado Nueva Esparta - <em>Año 1952</em>.</li>
+                 <li>Secretario de la Prefectura de Antolín del Campo - <em>Años 1952 a 1956</em>.</li>
+                 <li>Contador - Jefe Departamento - Rojas Hermanos, C.A. - Porlamar, Edo. Nva. Esparta - <em>Años 1957 a 1960</em>.</li>
+                 <li>Auditor Externo en forma independiente, en la empresa Rojas Hermanos, C.A. - Porlamar, Edo. Nva. Esparta - <em>Años 1961 a 1968</em>.</li>
+                 <li>Profesor de Contabilidad Básica, Superior, Costo, Auditoría, Matemáticas Financieras e Impuesto Sobre la Renta, en el Instituto Juan Bautista Arismendi - <em>Años 1957 a 1980</em>.</li>
+                 <li>Profesor de Matemáticas por horas en la Escuela Técnica Industrial de Juangriego - Estado Nueva Esparta - <em>Años 1960 a 1973</em>.</li>
+                 <li>Profesor de Contabilidad en el Liceo Dr. Francisco Antonio Risquez - <em>Años 1973 a 1980</em>.</li>
+                 <li>Director en el Instituto Nocturno Juan Bautista Arismendi - <em>Años 1969 a 1979</em>.</li>
+                 <li>Ejercicio Profesional Independiente - Contaduría Pública - Desde el año 1960 hasta la actualidad - <em>37 años ininterrumpidos</em>.</li>
+                 <li>Auditor Externo - Concejo Municipal Distrito Arismendi Estado Nueva Esparta - <em>Año 1963</em>.</li>
+                 <li>Auditor Externo - Administración Rentas Municipales - Antolín del Campo - <em>Año 1973</em>.</li>
+                 <li>Asesor de Empresas en forma independiente en materia Administrativa, Contable y Tributaria - <em>22 años (1975 a 1997)</em>.</li>
+                 <li>Presidente de la empresa Contadores y Asesores Marcano, C.A. desde su fundación - <em>Año 1991</em>.</li>
+                 <li>Asesor de Estudiantes Universitario en materias profesionales (Contabilidad Básica y Superior).</li>
+                 <li>Fundador y Director de una Escuela de Comercio Nocturna gratuita que funcionó en la Sociedad Pro - Arismendi en Paraguachi - <em>1966 a 1969</em>.</li>
+                 <li>Miembro Directivo del la Federación Venezolana de Maestro - Seccional Nueva Esparta - <em>Años 1968 - 1971</em>.</li>
+                 <li>Miembro activo del Colegio de Contadores Públicos del Estado Nueva Esparta, <em>22 años, hasta la actualidad</em>.</li>
+                 <li>Miembro del Tribunal Disciplinario del Colegio de Contadores del Estado Nueva Esparta - <em>Por diez años</em>.</li>
+             </ul>
+         </div>
+
+        <div class="two-columns">
+            <div class="column">
+                 <div class="cv-section" id="cultural-experience">
+                    <h3>En Materia Cultural</h3>
+                    <ul>
+                        <li>Fundador de la Federación de Centros Culturales del E.N.E (Fedecene) - <em>año 1966</em>.</li>
+                        <li>Presidente encargado de Fedecene - <em>1969</em>.</li>
+                        <li>Presidente de La Sociedad Pro-Arismendi de Paraguachi - E.N.E - <em>Años 1968 a 1971</em>.</li>
+                        <li>Asesor y Coordinador de los programas radiales de Fedecene, La Sociedad Pro-Arismendi y El Ateneo de Margarita - <em>Años 1967 a 1972</em>.</li>
+                    </ul>
+                </div>
+                 <div class="cv-section" id="political-experience">
+                    <h3>En Materia Política y Gremial:</h3>
+                     <ul>
+                        <li>Concejal (1º Suplente) del Concejo Municipal del Distrito Arismendi - Estado Nueva Esparta <em>(1969 a 1973)</em>.</li>
+                        <li>Candidato a Diputado a la Asamblea Legislativa Estado Nueva Esparta - <em>Año 1963</em>.</li>
+                    </ul>
+                </div>
+             </div>
+
+            <div class="column">
+                 <div class="cv-section" id="other-activities">
+                    <h3>Otras Actividades</h3>
+                    <ul>
+                        <li>Orador de Orden en el Centro Cultural Los Millanes - <em>Años 1969</em>.</li>
+                        <li>Orador de Orden - Sesión Solemne Concejo Municipal Distrito Arismendi - <em>Año 1987</em>.</li>
+                        <li>Orador en actos especial en Ciudad Ojeda - Estado Zulia, sobre la situación Socio-económica y Cultural de Margarita - <em>Año 1997</em>.</li>
+                    </ul>
+                </div>
+                 <div class="cv-section" id="honors">
+                    <h3>Menciones Honoríficas</h3>
+                    <ul>
+                        <li>Padrino y Epónimo de la Promoción de Contadores del instituto Juan Bautista Arismendi - <em>Año 1961</em>.</li>
+                        <li>Padrino y Epónimo de la primera promoción de Técnicos Mercantiles del Estado Nueva Esparta - <em>Año 1967</em>.</li>
+                        <li>Padrino y Epónimo de la promoción de Bachilleres Mención Contabilidad de la Escuela Técnica de Juangriego - Estado Nueva Esparta - <em>Año 1972</em>.</li>
+                        <li>Placa otorgada por la Alcaldía como Hijo Ilustre del Municipio Antolín del Campo, Estado Nueva Esparta - <em>Año 1997</em>.</li>
+                        <li>Placa otorgada por la Alcaldía del Municipio Gómez como Hijo Adoptivo de ese Municipio - <em>Año 1996</em>.</li>
+                        <li>Placa de Reconocimiento otorgada por Corprensa como Profesional Docente en la Educación Venezolana</li> <!-- Removed reference to handwritten note -->
+                    </ul>
+                </div>
+             </div>
+         </div>
+         
+        <div class="cv-section" id="current-status">
+             <h3>Situación Actual</h3>
+             <p>Actualmente Jubilado por el Ministerio de Educación por los años de servicio como Docente en la Educación Venezolana.</p>
+             <p><em>Prof. José Ramón Marcano</em></p>
+            <a class="btn btn-info text-white fw-bold" href="/index.html">Home <i class="fas fa-home ms-2" style="color: #222222;"></i></a>
+        </div>
+
+    </div>
+
+    
+
+</body>
+</html>

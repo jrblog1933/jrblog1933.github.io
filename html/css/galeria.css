@@ -1,0 +1,315 @@
+body{
+        position: relative;
+      }
+      p{
+        text-indent: 1rem;
+      }
+
+      .seccion-1{
+        background-image: url("/recursos/fondo.jpg"); 
+      }
+      .container-grilla{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1rem;
+      }
+
+      .galeria-item{
+        padding: 5px;
+        cursor: pointer;
+        display: block;
+        transition: all .3s ease-in-out;
+      }
+
+      .galeria-item:hover{
+        transform: scale(1.1);
+      }
+
+
+      
+      
+      @media (max-width: 575.98px){
+        .container-grilla{
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-gap: .4rem;
+        }        
+      }
+      
+
+      .modal{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999999;
+        display: none;
+        
+      }
+      .show-modal{
+        display: block;
+        animation: getIn .1s ease-in-out;
+        
+      }
+
+      @keyframes getIn{
+        from{
+            opacity: 0;
+          }to{
+            opacity: 1;
+          }
+      }
+
+      figure{
+        height: 100%;
+      }
+
+      
+      .conetenedor-img img{
+        object-fit: contain;
+
+      }
+
+      /*Modificacion de clases de Bootstrap*/
+      .accordion-button{
+        
+        
+      }
+      .accordion-button:not(.collapsed){
+        color: var(--bg-secundary) !important;
+        font-weight: 800;
+        background: var(--bg-primary-alfa);
+
+      }
+      .accordion-item{
+        border-color: #fff !important;
+      } 
+
+      .accordion-button:focus{
+        border:none !important;
+        box-shadow: none;
+      }
+      .accordion-button:not(.collapsed)::after{
+
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            transform: rotate(-180deg);
+      }
+
+      
+
+     
+
+.music-section {
+    text-align: center;
+  
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+     max-width: 500px;
+     width: 90%;
+    
+}
+
+.music-player {
+    margin-top: 20px;
+}
+
+.player-display {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra si el texto es corto */
+    margin-bottom: 20px;
+    background-color: #eee;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.player-cover-art {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.player-song-info {
+    text-align: left;
+}
+
+.player-song-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.player-song-info p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Reducir margen inferior si el slider va debajo */
+    margin-bottom: 15px;
+}
+
+/* NUEVO: Estilos para el progreso */
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Separa los elementos */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin-bottom: 25px; /* Margen antes de la playlist */
+    padding: 0 10px; /* Un poco de espacio lateral */
+    box-sizing: border-box; /* Incluye padding en el ancho */
+}
+
+.progress-slider {
+    flex-grow: 1; /* Ocupa el espacio central */
+    margin: 0 10px; /* Espacio entre el slider y los tiempos */
+    cursor: pointer;
+    height: 8px; /* Altura del slider */
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    background: #ddd; /* Fondo de la barra */
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Estilo del 'thumb' (la bolita para arrastrar) en Webkit (Chrome, Safari) */
+.progress-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #007bff; /* Color del thumb */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Estilo del 'thumb' en Firefox */
+.progress-slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none; /* Firefox puede añadir borde */
+}
+
+.time-display {
+    font-size: 0.8em;
+    color: #666;
+    min-width: 40px; /* Evita que salte el layout */
+    text-align: center;
+}
+/* FIN NUEVO */
+
+
+.control-button {
+    background: none;
+    border: none;
+    font-size: 1.5em; /* Tamaño de los iconos */
+    cursor: pointer;
+    margin: 0 15px;
+    color: #555;
+    transition: color 0.2s ease;
+}
+
+.control-button:hover {
+    color: #007bff;
+}
+
+.play-button .fa-pause {
+    display: none; /* Oculta el icono de pausa inicialmente */
+}
+
+.music-player.is-playing .play-button .fa-pause {
+    display: inline-block; /* Muestra pausa cuando está reproduciendo */
+}
+
+.music-player.is-playing .play-button .fa-play {
+    display: none; /* Oculta play cuando está reproduciendo */
+}
+
+
+.playlist {
+    margin-top: 30px;
+    text-align: left;
+    max-height: 200px; /* Altura máxima para la lista */
+    overflow-y: auto; /* Scroll si hay muchas canciones */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.playlist h3 {
+    background-color: #f0f0f0;
+    padding: 10px 15px;
+    margin: 0;
+    font-size: 1em;
+    border-bottom: 1px solid #ddd;
+}
+
+#playlist-songs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.playlist-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.playlist-item:last-child {
+    border-bottom: none;
+}
+
+.playlist-item:hover {
+    background-color: #f9f9f9;
+}
+
+.playlist-item.active-song {
+    background-color: #e0f7ff; /* Color para la canción activa */
+    font-weight: bold;
+}
+
+.playlist-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.playlist-item .song-details {
+    flex-grow: 1; /* Ocupa el espacio restante */
+}
+
+.playlist-item .song-title {
+    display: block; /* Para que el artista quede abajo */
+    font-size: 0.95em;
+    color: #333;
+}
+
+.playlist-item .song-artist {
+    font-size: 0.8em;
+    color: #777;
+}
+
+.playlist-item .audio-icon {
+    margin-left: 10px;
+    color: #007bff;
+    font-size: 0.9em;
+}
