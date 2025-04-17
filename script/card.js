@@ -6,7 +6,7 @@ export class Card extends HTMLElement{
 	}
 
 	static get observedAttributes(){
-		return ["titulo", "descripcion","img","url","display","noBtn"];
+		return ["titulo", "descripcion","img","url","display","noBtn","leer"];
 	}
 
 	attributeChangedCallback(nombre,viejoValor,nuevoValor){
@@ -27,7 +27,8 @@ export class Card extends HTMLElement{
 		const descripcion = this.getAttribute("descripcion") || "descripcion";
 		const url = this.getAttribute("url") || "/html/discursos.html";
 		const display = this.getAttribute("display") || "";
-		const noBtn = this.getAttribute("noBtn") || ""; 
+		const noBtn = this.getAttribute("noBtn") || "";
+		const leer = this.getAttribute("leer") || "Décimas"; 
 
 		this.shadowRoot.innerHTML = 
 		`
@@ -164,7 +165,7 @@ export class Card extends HTMLElement{
 
 	                      <a href = '${url}'  class="btn-info btn fs-6 ${noBtn} flex">
 	                      
-	                      	<span>Leer décimas</span>
+	                      	<span>Leer ${leer}</span>
 	                      
 	                      	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" style="color:#f4d9bb;" viewBox="0 0 16 16">
 	 						 <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
