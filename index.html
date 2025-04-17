@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/estilos_globales/style.css">
+    
+    <title>JRBlog</title>
+
+  </head>
+<body>
+    <div id="header"></div>
+    <section class="seccion-1-gif container-fluid mt-5">
+        
+    </section>
+    
+    <main class="container">
+
+        <section class=" oculto seccion-2 mt-5" id="decimas">
+            <article class="seccion-2-art">
+                <h2 class="pb-2">Destacados de la semana</h2>
+                <div class="destacados">
+                  <a href="/html/relatos.html" class="btn btn-info text-white fw-bold">
+                  RELATOS <span class="badge bg-secondary">4</span>
+                  </a>
+                   <a href="/html/discursos.html" class="btn btn-info text-white fw-bold">
+                  DISCURSOS <span class="badge bg-secondary">7</span>
+                  </a>
+                </div>
+                
+            </article>
+        </section>
+
+
+        <section class=" oculto seccion-2 mt-5" id="decimas">
+            <article class="seccion-2-art">
+                <h2 class="pb-2">Ramillete de Décimas</h2>
+                <p>
+                  Elige la temática de las décimas que más te inspiren y disfruta de mis décimas online.
+                </p>
+                
+            </article>
+        </section>
+
+        <section class=" oculto seccion-3 carrusel-section">
+          <div class="carrusel-contenedor">
+              <button class="carrusel-btn carrusel-btn-prev" onclick="moverCarrusel(-1)" hidden="">
+                
+                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M42.6667 16L21.3333 32L42.6667 48" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+              </button>
+              <div class="carrusel-lista">
+                <a href="html/decimasDeHistoria.html">
+                  <div class="carrusel-elemento">
+                      <img src="./recursos/historia.jpg" alt="décimas de historia">
+                      <div class="carrusel-texto">Décimas de historía</div>
+                  </div>
+                </a>
+                  <a href="html/decimasDeAmor.html">
+                   <div class="carrusel-elemento">
+
+                      <img src="./recursos/amor.jpg" alt="décimas de amor">
+
+                      <div class="carrusel-texto">Décimas de amor</div>
+                  </div>
+                  </a>
+                  
+                 <a href="html/decimasDeComedia.html">
+
+                   <div class="carrusel-elemento">
+
+
+                      <img src="https://imgs.search.brave.com/YQPK0pQl5aju9pdtlVVRxiaZaDXkrci4VJyAuLGsOE4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/Zm90by1ncmF0aXMv/bWFzY2FyYXMtY29t/ZWRpYS10cmFnZWRp/YV8yMy0yMTUxOTQ5/ODI2LmpwZz9zZW10/PWFpc19oeWJyaWQ" alt="décimas de comedia">
+
+                      <div class="carrusel-texto">Décimas de comedia</div>
+                  </div>
+                </a>
+                  
+              </div>
+              <button class="carrusel-btn carrusel-btn-next" onclick="moverCarrusel(1)" hidden="">
+                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21.3333 16L42.6667 32L21.3333 48" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+
+                
+                
+              </button>
+          </div>
+      </section>
+
+      <section class="oculto section-cita mt-5 ps-md-4 pe-md-4">
+        <div class="cita-contenedor text-center">
+            <span class="display-3 d-block text-start color-1"> <i class="fas fa-quote-left"></i></span>
+            <h4 class="fs-sm-6">La décima, un jardín de diez senderos sonoros,
+                donde cada verso es una flor que revela secretos,
+                y el alma encuentra un eco dulce entre sus primores.
+            </h4>
+            <h4 class="text-end"> <small> Prof. José Ramón Marcano</small></h4>
+            <span class="d-block text-end display-3 color-1"> <i class="fas fa-quote-right" ></i> </span>
+        </div>
+      </section>
+
+    <section class="oculto mt-5">
+      <article class="row">
+        <div class="col-sm-12 col-md-6">
+          <img class="img-fluid w-100" src="./recursos/discursos.png" alt="">
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <div class="inner ps-md-4 ps-lg-4">
+              <div>
+                <h2 class="w-100 text-center mb-4">También puedes leer</h2>
+            
+                <p class="">
+                  JRBlog es más que una página web de décimas, también es un blog de relatos.
+                    <br>
+                   un rincón creado para todos los amantes de los versos y las letras, para aquellos que se emocionan recreando cada frase en su imaginación y las sienten en su corazón.
+                </p>
+                
+                </div>
+
+                <article class="row">
+                  <div class="col-sm-12 col-md-6 ">
+                    <a class="btn btn-info d-block  fw-bold color-1" href="html/discursos.html">  
+                    <i class="fas fa-mouse-pointer pe-3 text-white"></i>
+                    DISCURSOS  
+
+                  </a>
+                  <ul class="drop-list discursos-container">
+                     
+                    
+                  </ul>
+
+                  </div>
+                  
+                  <div class="col-sm-12 col-md-6">
+                    <a class="btn btn-info d-block fw-bold color-1" href="html/relatos.html">
+                      <i class="fas fa-mouse-pointer text-white pe-3"></i> 
+                      RELATOS
+                    </a>
+
+                    <ul class="drop-list">
+                       <li><a class="dropdown-item" href="/html/relatos.html#historia"><i class="fas fa-chevron-right pe-4"></i>Historia</a></li>
+                      <li><a class="dropdown-item" href="/html/relatos.html#lecciones"><i class="fas fa-chevron-right pe-4"></i>Lecciones de vida</a></li>
+                      <li><a class="dropdown-item" href="/html/relatos.html#comicas"><i class="fas fa-chevron-right pe-4"></i>Situaciones Cómicas</a></li>
+                      
+                      <li><a class="dropdown-item" href="/html/relatos.html#cuentos"><i class="fas fa-chevron-right pe-4"></i>Cuentos cortos</a></li>
+
+                      <li><a class="dropdown-item" href="/html/relatos.html#experiencia"><i class="fas fa-chevron-right pe-4"></i>Experiencias Profesionales</a></li>
+                      <li><a class="dropdown-item" href="/html/relatos.html#viajes"><i class="fas fa-chevron-right pe-4"></i>Aventuras y viajes</a></li>
+
+                      
+                      <li><a class="dropdown-item" href="/html/relatos.html#videos"><i class="fas fa-chevron-right pe-4"></i>Relatos Audiovisuales</a></li>
+
+                      </li>
+                    </ul>
+                    
+                  </div>  
+                </article>
+                
+            </div>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="oculto section-ultimos-poemas mt-5">
+      <h2>Poemas del abuelo</h2>
+      <h4 class="sm-device d-block d-md-none p-3 text-uppercase shadow rounded h4  bg-color-1 text-white" style="">Desliza para conocerlos <i class="fas fa-arrow-right"></i> </h4>
+      <div class="ultimos-poemas-contenedor">
+          <div class="poema-card poema-move">
+              <img src="/recursos/img-f.jpg" alt="Hay una razón">
+              <div class="poema-contenido">
+                  <h3>Hay una razón</h3>
+                  <p class="poema-extracto">Para que la duda no te haga daño yo te quiero acompañar el resto de tu vida. Quiero llegar al borde de</p>
+                  <button class="poema-boton">Poema completo</button>
+              </div>
+          </div>
+          <div class="poema-card">
+              <img src="/recursos/img-f.jpg" alt="Flores para un invierno">
+              <div class="poema-contenido">
+                  <h3>Flores para un invierno</h3>
+                  <p class="poema-extracto">A mi corazón le crecieron raíces que se entrelazaron con el tuyo. Hiciste que brotara un jardín exuberante en un alma</p>
+                  <button class="poema-boton">Poema completo</button>
+              </div>
+          </div>
+          <div class="poema-card">
+              <img src="/recursos/img-f.jpg" alt="Agua y Sal">
+              <div class="poema-contenido">
+                  <h3>Agua y Sal</h3>
+                  <p class="poema-extracto">El aire es denso y salado. El estruendo del aire todo lo colma, mis pies se hunden en la arena, las olas</p>
+                  <button class="poema-boton">Poema completo</button>
+              </div>
+          </div>
+        
+      </div>
+  </section>
+  
+  <section class="bg-light row mt-5">
+    <article class="col-sm-12 col-md-6 p-3 order-2 order-md-1">
+      
+        <h2 class="text-center">Mis e-books de Relatos y Décimas</h2>
+        <br>
+        <p class="text-justify p-3">
+          Te invito a explorar mis ebooks de relatos y décimas, donde cada página es una aventura y cada verso un suspiro.
+        </p>
+      
+        <div class="mt-sm-4 d-flex justify-content-center align-items-center">
+          <div class="" style="width: 10rem;">
+            
+            <a href="html/ebooks.html" class="btn btn-info d-block text-center fw-bold color-1">
+            <i class="fas fa-book text-white"></i> E-BOOKS 
+            </a>
+          
+          </div>
+        </div>
+        
+    </article>
+
+    <article class="col-sm-12 col-md-6 oculto d-flex order-1 order-md-2">
+        <img src="/recursos/e.png" alt="ebooks" class="img-fluid flex-1">
+      
+    </article>
+    
+  </section>
+  
+  <section class="oculto section-conoceme">
+    <div class="conoceme-contenedor row  ">
+        
+        <div class="conoceme-texto col-12 col-md-6 order-2 order-md-1">
+            <div class="inner-r pe-md-4 pe-lg-4">
+                <div class="conoceme-titulo">
+                    <h2 class="conoceme-titulo-h2 mt-5">Conóceme 
+                     
+                      <img src="/recursos/caricatura.png" width="60">
+                    </h2>
+                </div>
+                <p>En este rincón digital, comparto mis ideas, proyectos y aprendizajes que he tenido a lo largo de mi vida. ¡Espero que disfrutes explorando!</p>
+            </div>
+            <div class="mt-sm-4">
+               
+              <article class="row">
+                
+                <div class="col-6">
+                    <a href="html/sobre-mi.html" class="btn btn-info d-block text-center fw-bold color-1">
+                     <i class="fas fa-mouse-pointer text-white"></i>  
+                      SOBRE MI
+                    </a>   
+                </div>
+                
+                <div class="col-6">
+                    <a href="html/galeria.html" class="btn btn-info d-block text-center fw-bold color-1">
+                    <i class="fas fa-image text-white"></i>
+                      GALERIA
+                    </a>   
+                </div>
+              </article>
+               
+
+               
+            </div>
+
+        </div>
+        <div class="conoceme-imagen col-12 col-md-6 mt-sm-5 order-1 order-md-2">
+            <img class="img-fluid w-100" src=./recursos/moncho-calidad.png alt="Foto de perfil">
+        </div>
+            
+    </div>
+
+</section>
+
+<section class="santa-rita mt-5">
+  
+</section>
+
+<section class="row mt-3">
+  <article class="col-md-6">
+      <h3 class="display-4"> ¿Tienes Preguntas? Conversemos. </h3>
+        <p>Si alguna reflexión o idea presentada en esta web ha despertado tu curiosidad o te gustaría profundizar en algún tema en particular, no dudes en ponerte en contacto. Estaré encantado de responder tus preguntas y compartir contigo mis perspectivas. Tu interés es la mejor motivación para seguir explorando y dialogando.</p>
+
+        <div class="mt-3">
+          <a href="/html/contacto.html" class="btn btn-info color-1 fw-bolder"><i class="fas fa-mouse-pointer me-2 text-white"></i> CONTÁCTAME</a>
+        </div>
+
+  </article>
+</section>
+
+<section class="oculto section-sigueme mt-5 mb-2">
+    <h2>Sígueme y conecta con mis décimas</h2>
+
+    <div class="sigueme-iconos">
+        <a href="#" class="sigueme-icono">
+          <i class = "fab fa-facebook"> </i>
+        
+        
+        </a>
+        <a href="#" class="sigueme-icono">
+          <i class = "fab fa-instagram"> </i>
+        </a>
+        
+        <a href="#" class="sigueme-icono">
+          <i class = "fab fa-whatsapp"></i>
+        </a>
+     
+    </div>
+</section>
+
+    
+
+    </main>
+    <div id="footer"></div>
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <script src="/main.js"></script>
+    <script src="/script/poema.js"></script>
+    <script defer="" src="/script/cargadorDePlantillas.js">
+    </script>
+    <script type="text/javascript">
+      setTimeout(()=> linkActive(".index"),1000);
+    </script>
+
+
+</body>
+</html>
