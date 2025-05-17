@@ -25,7 +25,7 @@ class CreateElements{
         "Reconocimiento por mi colaboración con la Organización Deportiva Arismendi de La Vecidad <br> <small class= 'color-1'> 20 de abril de 1985 </small>",
         "Mención Honorífica 'Premier' <br> <small class= 'color-1'> 1982 </small>",
         "Diploma otorgado por el Instituto Juan Bautista Arismendi  <br> <small class= 'color-1'> 15 de marzo de 1979</small>",
-        "Declaración de 'Hijo Ilustre' del municipio Francisco Esteban Gómez <br> <small class= 'color-1'> 19 de marzo de 1996</small>"
+        "Declaración de 'Hijo Adoptivo' del municipio Francisco Esteban Gómez <br> <small class= 'color-1'> 19 de marzo de 1996</small>"
        ,"","","","","",""
         ],
         descripcion: [

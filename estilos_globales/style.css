@@ -541,7 +541,7 @@ footer {
 }
 
 
-}
+
 .fa-mouse-pointer{
   transform: rotateY(180deg);
 }
@@ -875,6 +875,19 @@ footer {
     padding-right: 0;
     
 }
+
+.mes {
+    background: var(--bg-secundary);
+    color: var(--bg-primary);
+    padding: 0.2em 0.6em;
+    font-style: italic;
+    font-weight: bold;
+    transition: box-shadow 0.2s;
+    border: 1px solid var(--bg-red);
+  }
+
+  
+
 
 .conoceme-titulo {
     display: flex;

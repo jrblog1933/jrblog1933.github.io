@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/estilos_globales/style.css">
+    
+   
+    <style type="text/css">
+      .seccion-1{
+        background-image:url("data:image/jpeg;base64,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");
+        
+      }
+    </style>
+    
+
+    <title>Décimas de Religión</title>
+
+  </head>
+<body>
+  
+    <div id="header">
+      
+    </div>
+    
+    <section class="seccion-1 container-fluid">
+        <article class="seccion-1-art container">
+           <article class="row">
+                <div class="col col-md-6  mt-sm-5">
+                    <h1 class="text-center fw-bold">Décimas de Religión</h1>
+                    <p class="fw-bold">
+                        La religión, en su diversidad y riqueza, ha sido una fuente inagotable de inspiración para la poesía. Las décimas, con su estructura rítmica y melódica, se convierten en un medio perfecto para expresar la devoción, la fe y la espiritualidad. 
+                    </p>
+          
+                </div>
+                
+           </article>
+            
+        </article>
+    </section>
+    
+    <main class="container">
+
+    <!-- contenido de otras rutas-->
+     <section class="dec-hist-sec1 row mt-5 mb-5">
+      <article class="col col-md-8 col-lg-8 text-justify"> 
+        <h2>Versos Divinos</h2>
+        <br>
+        <p>
+            Esta es una página dedicada a la religión, donde la poesía en décimas se convierte en un medio para explorar y reflexionar sobre la espiritualidad, la fe y las creencias que han guiado a la humanidad a lo largo de los siglos. <br> A través de versos que riman y fluyen, se abordan temas como la devoción, la esperanza y la búsqueda de significado en la vida. <br> Cada décima es una invitación a conectar con lo divino, a encontrar consuelo en la palabra poética y a celebrar la riqueza de las tradiciones religiosas que nos unen.           
+        </p>
+      </article>
+        
+
+     </section>
+
+     <section class="mb-5 oculto">
+      <article class="">
+        
+        <h2 class="color-1 mb-5">Lee todas mis décimas sobre Religión:</h2>
+
+        <div class="container-cards">
+            
+              <card-item
+                 titulo="Décimas sobre Santa Rita de Casia"
+                 descripcion="Una devoción que trasciende el tiempo."
+                 img="data:image/webp;base64,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"
+                 url="decimas-rita.html"
+              ></card-item>
+
+            <card-item
+                 titulo="Décimas Sobre Mi Vida"
+                 descripcion="Conóceme a través de mi historia contada en décimas."
+                 img="/recursos/maestro.jpg"
+                 url="decimas-sobremi.html"
+                 display="placeholder-vacio"
+                 noBtn ="no-btn"
+                 ></card-item>
+
+             <card-item
+                titulo="Décimas Sobre JM Contadores"
+                descripcion="53 Aniversario de JM Contadores, F.P"
+                img="https://imgs.search.brave.com/XrT68T_asz9D-XNQyaCqu6fhcGKTLUmDm3cLshf7hLk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9mY2Nw/di5vcmcvd3AtY29u/dGVudC91cGxvYWRz/LzIwMjIvMDkvRkND/UFZfR09MRC0xMDI0/eDEwMjQucG5n"
+                url="decimas-jmcontadores.html"
+                display="placeholder-vacio"
+                 noBtn ="no-btn"
+             ></card-item>
+
+          
+        </div>
+
+      
+      </article>
+     </section>
+
+     <section class="bg-light mb-5">
+
+        <div class="p-3">
+           <h4 class="">¿Quieres sumergirte aún más en el mundo de la décima? Te ofrecemos un viaje a través de una amplia variedad de estilos y temáticas. </h4>
+           <p class="mt-2 ps-2"> Desde lo histórico a lo contemporáneo, cada décima es una joya literaria que te espera. ¡Explora y déjate sorprender!</p>
+          
+        </div>
+
+       <div id="carrusel"></div>
+
+    <div id="boton"></div>
+    </main>
+    
+    <div id="footer"></div>
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="module" src="/main.js"></script>
+    <script type="text/javascript" src="/script/cargadorDePlantillas.js"></script>
+    <script type="module" src="/script/card.js"></script>
+
+    <script type="module">
+      import { Card } from "/script/card.js";
+      
+      setTimeout(()=> linkActive(".decimas"),1000);
+    
+    </script>
+
+</body>
+</html>
