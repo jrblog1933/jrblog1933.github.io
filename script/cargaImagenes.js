@@ -37,7 +37,7 @@ class CreateElements{
         "Fuí participe de muchas actividades llevadas a cabo por esta organización, lo que conllevó a este reconocimiento.",
         "Reconocimiento que me fue otorgado por <b>CONFEPRENSA</b> por destacar como profesional de la contaduría en esa época.",
         "Este diploma es fiel testimonio de mi entrega total a esa institución como docente por más de 25 años dictando la mayoría de las asignaturas de contabilidad.",
-        "En este acto me declararon hijo ilustre de este municipio en sesión solemne llevada a cabo por la alcaldía del municipio con ocasión de la celebración del santo patrono de La Vecindad, <b>San Jóse</b>"
+        "En este acto me declararon hijo adoptivo de este municipio en sesión solemne llevada a cabo por la alcaldía del municipio con ocasión de la celebración del santo patrono de La Vecindad, <b>San Jóse</b>"
         ,"","","","","",""
         ]
       },
